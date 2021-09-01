@@ -1,0 +1,140 @@
+
+    	<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8">
+    <title>Login - Bootstrap Admin Template</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    
+<link href="@{'public/template/css/bootstrap.min.css'}" rel="stylesheet" type="text/css" />
+<link href="@{'public/template/css/bootstrap-responsive.min.css'}" rel="stylesheet" type="text/css" />
+
+<link href="@{'public/template/css/font-awesome.css'}" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
+    
+<link href="@{'public/template/css/style.css'}" rel="stylesheet" type="text/css">
+<link href="@{'public/template/css/pages/signin.css'}" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+	
+	<div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			
+			<a class="brand" href="index.html">
+				LOGIN - Botanica - Nymphaea Lotus			
+			</a>		
+			
+			<div class="nav-collapse">
+				<ul class="nav pull-right"> 
+					 
+					
+							
+					<li class="">						
+					<a href="@{Plantas.form}">Cadastrar Plantas (ADM)</a>
+					
+					<li class="">						
+					<a href="@{Plantas.listar}">Listar Plantas</a> 
+					
+					
+				
+			</ul>
+			</div>
+					
+			
+				
+		
+	
+		</div> <!-- /container -->
+		
+	</div> <!-- /navbar-inner -->
+	
+</div> <!-- /navbar -->
+
+
+<div class="account-container">
+	
+	<div class="content clearfix">
+		
+		#{if session.get("usuario.nivel").equals("1")}
+		
+		<form action="@{Plantas.salvar}" method="POST" enctype="multipart/form-data" >
+		<input type="hidden" name="planta.id" value="${planta?.id}" />
+		
+			<h1>Cadastrar Plantas</h1>		
+			
+				
+				<div class="field">
+					<label for="username">Nome:</label>
+					 <input type="text" name="planta.Nome" value="${planta?.Nome}" /> <br/> 
+				</div> <!-- /field -->
+				
+				<div class="field">
+					<label for="username">Nome Cientifico:</label>
+					 <input type="text" name="planta.Nome_Cientifico" value="${planta?.Nome_Cientifico}" /> <br/>
+				</div> <!-- /field -->
+				
+				<div class="field">
+					<label for="username">Principal Caracteristicas:</label>
+					<input type="text" name="planta.Caracteristicas" value="${planta?.Caracteristicas}" /> <br/>
+				</div> <!-- /field -->
+				
+				Foto da planta:
+	<input type="file" name="foto">
+	<br/>
+	
+	#{if planta?.id}
+			<img src="../uploads/${planta.nomeFoto}" style="width:300px;">
+			</br>
+	#{/if}
+	
+	
+			<div class="login-actions">
+				
+				
+									
+				<button class="button btn btn-success btn-large">Salvar</button>
+				
+			</div> <!-- .actions -->
+			
+			
+			
+		</form>
+		#{/if}
+		
+	</div> <!-- /content -->
+	
+</div> <!-- /account-container -->
+
+
+
+
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script src="js/signin.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+		
+	
+    	
+

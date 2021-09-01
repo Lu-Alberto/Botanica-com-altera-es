@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    
+
+	
+<link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/play-pagination.css'}"> 
+<link href="@{'public/template/css/bootstrap.min.css'}" rel="stylesheet" type="text/css" />
+<link href="@{'public/template/css/bootstrap-responsive.min.css'}" rel="stylesheet" type="text/css" />
+
+<link href="@{'public/template/css/font-awesome.css'}" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
+    
+<link href="@{'public/template/css/style.css'}" rel="stylesheet" type="text/css">
+<link href="@{'public/template/css/pages/signin.css'}" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+			
+			<div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			
+			<a class="brand" href="index.html">
+				 Botanica - Nymphaea Lotus			
+			</a>		
+			
+			<div class="nav-collapse">
+				<ul class="nav pull-right"> 
+					 
+					
+					<li>
+					<a href="@{Plantas.form}">Cadastrar Plantas</a>
+					</li>		
+				
+					<li class="">						
+					<a href="@{Plantas.listar}">Listar Plantas</a> 
+					</li>
+					
+					
+			</ul>
+			</div>
+						
+				
+			</div><!--/.nav-collapse -->	
+	
+		</div> <!-- /container -->
+		
+	</div> <!-- /navbar-inner -->
+
+
+
+
+
+		
+		
+	</div> <!-- /content -->
+	
+</div> <!-- /account-container -->
+
+
+
+
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script src="js/signin.js"></script>
+
+</br>
+
+<h1 align="center" >Listagem das Plantas</h1></br>
+<div align="center">
+    	<form action="@{Plantas.listar}">
+    	
+    	<input name="busca">
+    	
+    	</br>
+    	<button style="width:150px;">Pesquisar Planta</button>
+    	
+    	</form>
+    	
+    	<div align="center">
+
+			
+				<button> <a href="@{Usuarios.site}">voltar</a> </button>	
+		</div>
+    	
+    	
+    	
+    	
+</br>
+<div align="center">
+#{paginate.list items:Listapaginacao, as:'planta'}
+	</br>
+	#{if session.get("usuario.nivel").equals("1")} </br>
+	<h5> <a href="@{plantas.editar(planta.id)}">Editar Usuario</a></h5> 
+	<h5> <a href="@{plantas.remover(planta.id)}">Remover Usuario</a> </h5>
+	#{/if}
+	
+	
+	<h3 style="color:#2F4F4F;" >Nome: ${planta.Nome} || Nome_Cientifico: ${planta.Nome_Cientifico} || Caracteristicas: ${planta.Caracteristicas} || Foto: </h3></br> <img src="../uploads/${planta.nomeFoto}" style="width:300px;">  <br/>
+	
+#{/paginate.list}
+
+#{paginate.controls items:Listapaginacao/}
+</div>
+
+
+
+
+#{if flash.success}
+    		<div class='msgVerde'>${flash.success}</div>
+    	#{/if}
+    	
+    	#{if flash.error}
+    		<div class='msgVermelho'>${flash.error}</div>
+    	#{/if}
+    
+    	<br>

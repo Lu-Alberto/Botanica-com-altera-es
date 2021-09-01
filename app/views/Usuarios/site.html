@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+<title>#{get 'title'  /} Bem vinvos ao Botanica - Nymphaea Lotus</title>
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link href="@{'public/template/css/bootstrap.min.css'}" rel="stylesheet">
+<link href="@{'public/template/css/bootstrap-responsive.min.css'}" rel="stylesheet">
+<link href="public/template/http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
+<link href="@{'public/template/css/font-awesome.css'}" rel="stylesheet">
+<link href="@{'public/template/css/style.css'}" rel="stylesheet">
+<link href="@{'public/template/css/pages/dashboard.css'}" rel="stylesheet">
+
+
+#{get 'moreStyles' /}
+
+<h1 align="center">Bem vindo ao Botanica - Nymphaea Lotus</h1>
+
+<h3 align="center">Aqui você encontra informções sobre as plantas mais diversificadas da Terra</h3>
+
+
+<style>
+#divisão{
+border: 4px solid #2F4F4F;
+border-radius: 15px;
+}
+
+#img{
+
+border-radius: 25px;
+}
+</style>
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+         
+           
+      
+            
+        <div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			
+			<a class="brand" href="index.html">
+						
+			</a>	
+    
+      <!--/.nav-collapse --> 
+    </div>
+    <!-- /container --> 
+  </div>
+  <!-- /navbar-inner --> 
+</div>
+<!-- /navbar -->
+<div align="center" class="subnavbar">
+  <div class="subnavbar-inner">
+    <div class="container">
+      <ul class="mainnav">
+        <li class="active"><a href="@{Usuarios.form}"><i class="icon-dashboard"></i><span> Novo Usuario</span> </a> </li>
+        <li><a href="@{Usuarios.listar}"><i class="icon-list-alt"></i><span> Listagem</span> </a> </li>
+        <li><a href="@{Plantas.listar}"><i class="icon-list-alt"></i><span> Informações Plantas (ADM)</span> </a> </li>
+		<li><a href="@{Login.sair}"><i class="icon-bar-chart"></i><span> Sair</span> </a> </li>
+       
+        
+          <ul class="dropdown-menu">
+            
+
+      
+           
+        
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /container --> 
+  </div>
+  <!-- /subnavbar-inner --> 
+</div>
+<!-- /subnavbar -->
+
+            <!-- /widget-header -->
+           
+           
+  
+
+  
+
+  
+ 
+	<div align="center" id="divisão" >
+      <h2>AEONIUM KIWI TRICOLOR - BELÍSSIMA SUCULENTA</h2>
+      <img id="img" class="img2"  width="220px" src="@{'public/stylesheets/styles/images/img2.jpeg'}" />
+      
+      <p> <font size="4"> <b>Esse exemplar de Aeonium apresenta belíssima coloração, de centro amarelado expandindo para o verde escuro e contorno em rosa-pink, 
+      uma das mais belas dentre as suculentas! Só no Brasil contamos com mais de 100 tipos de suculentas, plantas cuja característica mais 
+      marcante é o fato de armazenarem boa quantidade de água nas raízes, no talo ou nas folhas, o que varia de acordo com a espécie. Essa 
+      adaptação lhes permite manter reservas por períodos prolongados e mesmo viver em locais áridos, secos e de temperatura elevada, como 
+      onde surgiram: principalmente em regiões da África e da América. Embora cactos e agaves sejam consideradas suculentas, essa designação 
+      costuma ser feita apenas para as variedades de folhas miúdas, gordinhas e cerosas. </b> </font></p>
+  </div>
+  <br>
+  
+  
+    <div align="center"  id="divisão">
+        <h2> Vaccinium myrtillus - Mirtilo Amora Azul</h2>
+      <img id="img" class="img1" width="220px" src="@{'public/stylesheets/styles/images/img1.jpeg'}" alt="" />
+      <p> <font size="4"> <b> Nativos da Eurásia, o mirtilo é utilizado pelo Homem desde o século XVI, principalmente 
+      devido às suas propriedades antioxidantes e antibacterianas. Esta pequena baga está no topo dos alimentos 
+      com maior teor de antioxidantes e é rica em fibra, vitaminas A, B e C e sais minerais Arbusto de pequeno porte 
+      que aprecia temperaturas amenas, apresenta delicado fruto pequeno que quando maduro adquire a coloração azul arroxeada, 
+      podendo ser consumido in natura ou geleia. As propriedades medicinais do mirtilo são muitas, atuando positivamente em casos 
+      de diarreias graves, de inflamações na boca e catarros, de infecção urinária, de diabetes e até contra febres. Tomar suco de
+       mirtilo é então um delicioso remédio!</b> </font></p>
+      </div>  
+      
+      <br>
+
+           
+                    
+                           
+                       
+                        
+      <!-- /row --> 
+    </div>
+    <!-- /container --> 
+  </div>
+  <!-- /extra-inner --> 
+</div>
+<!-- /extra -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="container">
+      <div class="row">
+        <div align="center" class="span12"> &copy; 2021 Bootstrap Template. </div>
+        <h5 align="center" class="span12"> &copy; Todos os direitos reservados.</h5>
+        
+        
+        
+        
+        <!-- /span12 --> 
+      </div>
+      <!-- /row --> 
+    </div>
+    <!-- /container --> 
+  </div>
+  <!-- /footer-inner --> 
+</div>
+<!-- /footer --> 
+<!-- Le javascript
+================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script src="js/jquery-1.7.2.min.js"></script> 
+<script src="js/excanvas.min.js"></script> 
+<script src="js/chart.min.js" type="text/javascript"></script> 
+<script src="js/bootstrap.js"></script>
+<script language="javascript" type="text/javascript" src="js/full-calendar/fullcalendar.min.js"></script>
+ 
+<script src="js/base.js"></script> 
+<script>     
+
+        var lineChartData = {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [
+				{
+				    fillColor: "rgba(220,220,220,0.5)",
+				    strokeColor: "rgba(220,220,220,1)",
+				    pointColor: "rgba(220,220,220,1)",
+				    pointStrokeColor: "#fff",
+				    data: [65, 59, 90, 81, 56, 55, 40]
+				},
+				{
+				    fillColor: "rgba(151,187,205,0.5)",
+				    strokeColor: "rgba(151,187,205,1)",
+				    pointColor: "rgba(151,187,205,1)",
+				    pointStrokeColor: "#fff",
+				    data: [28, 48, 40, 19, 96, 27, 100]
+				}
+			]
+
+        }
+
+        
+          
+
+        $(document).ready(function() {
+        var date = new Date();
+        var d = date.getDate();
+        var m = date.getMonth();
+        var y = date.getFullYear();
+        var calendar = $('#calendar').fullCalendar({
+          header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+          },
+          selectable: true,
+          selectHelper: true,
+          select: function(start, end, allDay) {
+            var title = prompt('Event Title:');
+            if (title) {
+              calendar.fullCalendar('renderEvent',
+                {
+                  title: title,
+                  start: start,
+                  end: end,
+                  allDay: allDay
+                },
+                true // make the event "stick"
+              );
+            }
+            calendar.fullCalendar('unselect');
+          },
+          editable: true,
+          events: [
+            {
+              title: 'All Day Event',
+              start: new Date(y, m, 1)
+            },
+            {
+              title: 'Long Event',
+              start: new Date(y, m, d+5),
+              end: new Date(y, m, d+7)
+            },
+            {
+              id: 999,
+              title: 'Repeating Event',
+              start: new Date(y, m, d-3, 16, 0),
+              allDay: false
+            },
+            {
+              id: 999,
+              title: 'Repeating Event',
+              start: new Date(y, m, d+4, 16, 0),
+              allDay: false
+            },
+            {
+              title: 'Meeting',
+              start: new Date(y, m, d, 10, 30),
+              allDay: false
+            },
+            {
+              title: 'Lunch',
+              start: new Date(y, m, d, 12, 0),
+              end: new Date(y, m, d, 14, 0),
+              allDay: false
+            },
+            {
+              title: 'Birthday Party',
+              start: new Date(y, m, d+1, 19, 0),
+              end: new Date(y, m, d+1, 22, 30),
+              allDay: false
+            },
+            {
+              title: 'EGrappler.com',
+              start: new Date(y, m, 28),
+              end: new Date(y, m, 29),
+              url: 'http://EGrappler.com/'
+            }
+          ]
+        });
+      });
+    </script><!-- /Calendar -->
+    
+      #{get 'moreScripts' /}
+</body>
+</html>

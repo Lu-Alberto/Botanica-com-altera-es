@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    
+
+
+    
+<link href="@{'public/template/css/bootstrap.min.css'}" rel="stylesheet" type="text/css" />
+<link href="@{'public/template/css/bootstrap-responsive.min.css'}" rel="stylesheet" type="text/css" />
+
+<link href="@{'public/template/css/font-awesome.css'}" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
+    
+<link href="@{'public/template/css/style.css'}" rel="stylesheet" type="text/css">
+<link href="@{'public/template/css/pages/signin.css'}" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+			
+			
+			<div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			
+			<a class="brand" href="index.html">
+				 Botanica - Nymphaea Lotus			
+			</a>		
+			
+			<div class="nav-collapse">
+				<ul class="nav pull-right"> 
+					 
+					
+						
+				
+					<li class="">						
+					<a href="@{Login.sair}">Sair</a> 
+					</li>
+					
+					
+			</ul>
+			</div>
+						
+				
+			</div><!--/.nav-collapse -->	
+	
+		</div> <!-- /container -->
+		
+	</div> <!-- /navbar-inner -->
+
+
+
+
+
+		
+		
+	</div> <!-- /content -->
+	
+</div> <!-- /account-container -->
+
+
+
+
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script src="js/signin.js"></script>
+
+
+<h1 align="center" >Listagem de Usuarios</h1></br>
+<div align="center">
+#{list items:usuarios, as:'usuario'}	
+	
+	#{if session.get("usuario.nivel").equals("1")}
+	<h4><a href="@{Usuarios.editar(usuario.id)}" >Editar</a></h4>
+	<h4><a href="@{Usuarios.remover(usuario.id)}">Remover</a></h4>
+	#{/if}
+
+	<h3 align="center">Nome: ${usuario.nome} Email: ${usuario.email}</h3> 
+#{/list}
+</div>
+
+
+<div align="center">
+</br>
+					
+				<button style="width:150px;"> <a href="@{usuarios.site}">voltar</a> </button>	
+				
+</div>
+</br>
+			
+</body>
+</html>
+
+
+
